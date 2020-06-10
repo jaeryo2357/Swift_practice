@@ -1,5 +1,8 @@
 import UIKit
 
+
+//dump 클래스 프로퍼티까지 모두 출력
+
 let numberOne : Int = 123
 let numberTwo : Double = 123
 let string: String = "A"
@@ -61,4 +64,29 @@ case 50:
 default:
     print("default가 무조건 있어야한다.")
 }
+
+//옵셔널 추출
+
+func printName(_ name: String) {
+    print(name)
+}
+
+var myName: String? = nil
+
+//옵셔널 바인딩 ,로 여러개 동시 선언가능 단 모두 nil이 아니여야 if 문 실행
+if let name: String = myName {
+    printName(name)
+} else {
+    print("myName == nil")
+}
+
+var yourName : String? = nil
+
+//if let name: String = myName, let youName: String = yourName {
+//
+//}
+
+//강제추출은 오류를 발생할 가능성이 많으므로 사용자제
+printName(myName!) //런타임 오류 발생
+
 
