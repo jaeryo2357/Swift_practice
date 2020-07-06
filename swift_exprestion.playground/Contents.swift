@@ -49,3 +49,17 @@ hana.name = "hana"
 let soyun : Person = Person()
 soyun.name = "soyun"   //let이어도 변경 가능
 
+
+//MARK: Week 열거형은 값 타입
+// 다른 언어에서는 열거형은 정수 타입으로 0, 1 시작하지만 Swift에서는 유의미한 고유의 값 but 정수의 값을 부여 가능, String도 가능
+enum WeekDay{
+    case Mon, Tue
+    case Wen
+    case Fri, Set, Sun
+    
+    func getToday() -> WeekDay{
+        return self
+    }
+}
+
+
